@@ -1,0 +1,22 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master", "dev" ]
+  pull_request:
+    branches: [ "master", "dev" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set branch name
+      run: echo "BRANCH_NAME=${GITHUB_REF_NAME}" >> $GITHUB_ENV
+    - name: Build work-queue-loader
+      run: docker build . --file loader/Dockerfile --tag work-queue-loader:${{ env.BRANCH_NAME }}-$(date +%s)
+    - name: Build work-queue-processor
+      run: docker build . --file processor/Dockerfile --tag work-queue-processor:${{ env.BRANCH_NAME }}-$(date +%s)
