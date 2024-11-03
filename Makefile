@@ -1,8 +1,8 @@
 JOB_USER=my-user
 JOB_PASS=my-password
 TS=(shell date '%s')
-PROCESSOR_IMAGE=stevecooperorg/work-queue-processor:latest
-LOADER_IMAGE=stevecooperorg/work-queue-loader:latest
+PROCESSOR_IMAGE=blackopsrepl/work-queue-processor:latest
+LOADER_IMAGE=blackopsrepl/work-queue-loader:latest
 
 all: docker-build
 

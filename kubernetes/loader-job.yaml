@@ -10,7 +10,7 @@ spec:
       creationTimestamp: null
     spec:
       containers:
-      - image: stevecooperorg/work-queue-loader:latest
+      - image: blackopsrepl/work-queue-loader:latest
         imagePullPolicy: Always
         name: loader
         env:

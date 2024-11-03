@@ -10,7 +10,7 @@ spec:
       creationTimestamp: null
     spec:
       containers:
-      - image: stevecooperorg/work-queue-processor:latest
+      - image: blackopsrepl/work-queue-processor:latest
         imagePullPolicy: Always
         name: my-job
         env:
