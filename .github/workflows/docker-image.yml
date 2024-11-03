@@ -19,4 +19,4 @@ jobs:
     - name: Build work-queue-loader
       run: cd loader && docker build . --file Dockerfile --tag work-queue-loader:${{ env.BRANCH_NAME }}-$(date +%s)
     - name: Build work-queue-processor
-      run: cd ../processor && docker build . --file Dockerfile --tag work-queue-processor:${{ env.BRANCH_NAME }}-$(date +%s)
+      run: cd processor && docker build . --file Dockerfile --tag work-queue-processor:${{ env.BRANCH_NAME }}-$(date +%s)
